@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="system" location="329,89" size="378,226">
+    <action name="login" location="7,73" size="150,41">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="loginView" location="15,137" size="150,41">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="loginView.jsp" />
+      </result>
+    </action>
+    <action name="exit" location="201,28" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="saveEditAdmin" location="218,85" size="150,40">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="logList" location="192,155" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="logList.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="school" location="122,460" size="656,1210">
+    <action name="main" location="17,25" size="150,111">
+      <result name="main">
+        <resourceEdge source="main" routing="0" target="main.jsp" />
+      </result>
+      <result name="editStudent">
+        <resourceEdge source="editStudent" routing="0" target="enterStudentInfo.jsp" />
+      </result>
+      <result name="errorInfo">
+        <resourceEdge source="errorInfo" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="studentDiv" location="15,156" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentDiv.jsp" />
+      </result>
+    </action>
+    <action name="gradeList" location="10,211" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="gradeList.jsp" />
+      </result>
+    </action>
+    <action name="addGrade" location="483,186" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="addGrade.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingGrade" location="232,161" size="150,40" />
+    <action name="editGrade" location="12,272" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="editGrade.jsp" />
+      </result>
+    </action>
+    <action name="getSchoolNode" location="215,275" size="150,24" />
+    <action name="classList" location="494,303" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="classList.jsp" />
+      </result>
+      <result name="errorInfo">
+        <resourceEdge source="errorInfo" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="addClass" location="498,237" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="addClass.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingClass" location="235,111" size="150,40" />
+    <action name="editClass" location="13,375" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="editClass.jsp" />
+      </result>
+    </action>
+    <action name="saveEditClass" location="221,324" size="150,24" />
+    <action name="updateGrade" location="222,381" size="150,23" />
+    <action name="studentList" location="17,442" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentList.jsp" />
+      </result>
+      <result name="errorInfo">
+        <resourceEdge source="errorInfo" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="studentInfo" location="496,387" size="150,83">
+      <result name="add">
+        <resourceEdge source="add" routing="0" target="addStudent.jsp" />
+      </result>
+      <result name="edit">
+        <resourceEdge source="edit" routing="0" target="editStudent.jsp" />
+      </result>
+      <result name="errorInfo">
+        <resourceEdge source="errorInfo" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="saveStudent" location="227,428" size="150,21" />
+    <action name="beforeHandAdd" location="18,547" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="beforeHandAdd.jsp" />
+      </result>
+    </action>
+    <action name="saveBeforeHandAdd" location="226,459" size="150,24" />
+    <action name="saveEnterStudent" location="488,130" size="150,40" />
+    <action name="review" location="485,64" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="reviewStudent.jsp" />
+      </result>
+    </action>
+    <action name="saveReview" location="238,60" size="150,40" />
+    <action name="delStudent" location="223,212" size="150,24" />
+    <action name="delClass" location="217,491" size="150,23" />
+    <action name="delGrade" location="219,527" size="150,22" />
+    <action name="teacherList" location="491,484" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="teacherList.jsp" />
+      </result>
+    </action>
+    <action name="addTeacher" location="479,542" size="150,40">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="addTeacher.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingTeacher" location="214,557" size="150,25" />
+    <action name="delTeacher" location="221,588" size="150,22" />
+    <action name="editTeacher" location="36,616" size="150,59">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="editTeacher.jsp" />
+      </result>
+      <result name="errorInfo">
+        <resourceEdge source="errorInfo" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="updateTeacher" location="219,617" size="150,22" />
+    <action name="userInfo" location="483,620" size="150,62">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="login.jsp" />
+      </result>
+      <result name="adminInfo">
+        <resourceEdge source="adminInfo" routing="0" target="upateAdminInfo.jsp" />
+      </result>
+    </action>
+    <action name="systemConfigDiv" location="48,702" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="systemConfigDiv.jsp" />
+      </result>
+    </action>
+    <action name="schoolInfo" location="479,697" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="schoolInfo.jsp" />
+      </result>
+    </action>
+    <action name="saveSchoolInfo" location="221,653" size="150,19" />
+    <action name="teacherLevel" location="43,759" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="teacherLevel.jsp" />
+      </result>
+    </action>
+    <action name="addTeacherLevel" location="461,760" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addTeacherLevel.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingTeacherLevel" location="221,685" size="150,25" />
+    <action name="delTeacherType" location="224,719" size="150,22" />
+    <action name="nationList" location="43,821" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="nationList.jsp" />
+      </result>
+    </action>
+    <action name="addNation" location="477,820" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addNation.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingNation" location="229,747" size="150,22" />
+    <action name="delNation" location="225,798" size="150,18" />
+    <action name="bloodGroup" location="31,867" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="bloodGroup.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingBloodGroup" location="232,828" size="150,23" />
+    <action name="addBloodGroup" location="478,885" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addBloodGroup.jsp" />
+      </result>
+    </action>
+    <action name="delBloodGroup" location="240,860" size="150,24" />
+    <action name="politicalOrientation" location="32,925" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="politicalOrientation.jsp" />
+      </result>
+    </action>
+    <action name="studentStatusList" location="487,934" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentStatusList.jsp" />
+      </result>
+    </action>
+    <action name="addPoliticalOrientation" location="41,971" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addPoliticalOrientation.jsp" />
+      </result>
+    </action>
+    <action name="saveAddingPoliticalOrientation" location="240,899" size="150,23" />
+    <action name="delPoliticalOrientation" location="245,940" size="150,22" />
+    <action name="saveAddingStudentStatus" location="249,967" size="150,19" />
+    <action name="addStudentStatus" location="478,990" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addStudentStatus.jsp" />
+      </result>
+    </action>
+    <action name="delStudentStatus" location="247,995" size="150,23" />
+    <action name="groupList" location="37,1040" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="groupList.jsp" />
+      </result>
+    </action>
+    <action name="addGroupInfo" location="481,1049" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="addGroupInfo.jsp" />
+      </result>
+    </action>
+    <action name="saveGroupInfo" location="250,1033" size="150,23" />
+    <action name="editGroup" location="41,1085" size="150,77">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="editGroup.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="errorInfo.jsp" />
+      </result>
+    </action>
+    <action name="updateGroupInfo" location="255,1072" size="150,23" />
+    <action name="uploadPhoto" location="254,1113" size="150,23" />
+    <action name="search" location="481,1117" size="150,40">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="search.jsp" />
+      </result>
+    </action>
+    <action name="searcherStudent" location="236,1145" size="150,42">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="searchStudentList.jsp" />
+      </result>
+    </action>
+    <action name="delGroup" location="480,1170" size="150,24" />
+  </package>
+  <webResource name="login.jsp" path="/WEB-INF/web/login.jsp" location="66,72" size="150,55" />
+  <webResource name="loginView.jsp" path="/WEB-INF/web/loginView.jsp" location="-70,150" size="150,55" />
+  <webResource name="manager.jsp" path="/WEB-INF/web/manager.jsp" location="1042,699" size="150,55" />
+  <webResource name="main.jsp" path="/WEB-INF/web/main.jsp" location="-68,315" size="150,55" />
+  <webResource name="studentDiv.jsp" path="/WEB-INF/web/studentDiv.jsp" location="-72,414" size="150,55" />
+  <webResource name="gradeList.jsp" path="/WEB-INF/web/gradeList.jsp" location="-72,496" size="150,55" />
+  <webResource name="addGrade.jsp" path="/WEB-INF/web/addGrade.jsp" location="862,345" size="150,55" />
+  <webResource name="editGrade.jsp" path="/WEB-INF/web/editGrade.jsp" location="-165,572" size="150,55" />
+  <webResource name="classList.jsp" path="/WEB-INF/web/classList.jsp" location="851,582" size="150,55" />
+  <webResource name="addClass.jsp" path="/WEB-INF/web/addClass.jsp" location="917,468" size="150,55" />
+  <webResource name="editClass.jsp" path="/WEB-INF/web/editClass.jsp" location="-167,666" size="150,55" />
+  <webResource name="studentList.jsp" path="/WEB-INF/web/studentList.jsp" location="-136,773" size="150,55" />
+  <webResource name="addStudent.jsp" path="/WEB-INF/web/addStudent.jsp" location="895,700" size="150,55" />
+  <webResource name="editStudent.jsp" path="/WEB-INF/web/editStudent.jsp" location="909,783" size="150,55" />
+  <webResource name="beforeHandAdd.jsp" path="/WEB-INF/web/beforeHandAdd.jsp" location="-184,864" size="150,55" />
+  <webResource name="errorInfo.jsp" path="/WEB-INF/web/errorInfo.jsp" location="-34,237" size="150,55" />
+  <webResource name="enterStudentInfo.jsp" path="/WEB-INF/web/enterStudentInfo.jsp" location="160,242" size="150,55" />
+  <webResource name="reviewStudent.jsp" path="/WEB-INF/web/reviewStudent.jsp" location="764,243" size="150,55" />
+  <webResource name="teacherList.jsp" path="/WEB-INF/web/teacherList.jsp" location="974,860" size="150,55" />
+  <webResource name="addTeacher.jsp" path="/WEB-INF/web/addTeacher.jsp" location="931,944" size="150,55" />
+  <webResource name="editTeacher.jsp" path="/WEB-INF/web/editTeacher.jsp" location="-167,970" size="150,55" />
+  <webResource name="upateAdminInfo.jsp" path="/WEB-INF/web/upateAdminInfo.jsp" location="930,1034" size="150,55" />
+  <webResource name="logList.jsp" path="/WEB-INF/web/logList.jsp" location="753,66" size="150,55" />
+  <webResource name="systemConfigDiv.jsp" path="/WEB-INF/web/systemConfigDiv.jsp" location="-179,1076" size="150,55" />
+  <webResource name="schoolInfo.jsp" path="/WEB-INF/web/schoolInfo.jsp" location="909,1126" size="150,55" />
+  <webResource name="teacherLevel.jsp" path="/WEB-INF/web/teacherLevel.jsp" location="-176,1171" size="150,55" />
+  <webResource name="addTeacherLevel.jsp" path="/WEB-INF/web/addTeacherLevel.jsp" location="903,1210" size="150,55" />
+  <webResource name="nationList.jsp" path="/WEB-INF/web/nationList.jsp" location="-134,1247" size="150,55" />
+  <webResource name="addNation.jsp" path="/WEB-INF/web/addNation.jsp" location="922,1295" size="150,55" />
+  <webResource name="bloodGroup.jsp" path="/WEB-INF/web/bloodGroup.jsp" location="-147,1342" size="207,44" />
+  <webResource name="addBloodGroup.jsp" path="/WEB-INF/web/addBloodGroup.jsp" location="922,1375" size="150,55" />
+  <webResource name="politicalOrientation.jsp" path="/WEB-INF/web/politicalOrientation.jsp" location="-93,2" size="150,55" />
+  <webResource name="studentStatusList.jsp" path="/WEB-INF/web/studentStatusList.jsp" location="188,7" size="150,55" />
+  <webResource name="addPoliticalOrientation.jsp" path="/WEB-INF/web/addPoliticalOrientation.jsp" location="-171,1451" size="150,55" />
+  <webResource name="addStudentStatus.jsp" path="/WEB-INF/web/addStudentStatus.jsp" location="337,13" size="150,55" />
+  <webResource name="groupList.jsp" path="/WEB-INF/web/groupList.jsp" location="-57,1512" size="150,55" />
+  <webResource name="addGroupInfo.jsp" path="/WEB-INF/web/addGroupInfo.jsp" location="576,4" size="150,55" />
+  <webResource name="editGroup.jsp" path="/WEB-INF/web/editGroup.jsp" location="10,10" size="150,55" />
+  <webResource name="search.jsp" path="/WEB-INF/web/search.jsp" location="10,10" size="150,55" />
+  <webResource name="searchStudentList.jsp" path="/WEB-INF/web/searchStudentList.jsp" location="10,10" size="150,55" />
+</Struts2Diagram>
+

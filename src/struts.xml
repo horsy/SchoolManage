@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="stuts.objectFactory" value="spring"></constant>
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	<constant name="struts.i18n.reload" value="true"></constant>
+	<constant name="struts.action.extension" value="html"></constant>
+	<constant name="struts.ui.theme" value="simple" /> 
+	<package name="system" extends="struts-default">
+		<interceptors> 
+			<interceptor name="exception" class="com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor"/>
+		</interceptors>
+		<action name="login"
+			class="com.school.system.web.Login">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/login.jsp
+			</result>
+		</action>
+		<action name="loginView"
+			class="com.school.system.web.LoginView">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/loginView.jsp
+			</result>
+		</action>
+		<action name="exit"
+			class="com.school.system.web.Exit">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/login.jsp
+			</result>
+		</action>
+		<action name="saveEditAdmin"
+			class="com.school.view.web.SaveEditAdmin">
+			<result name="login" type="dispatcher">
+				/WEB-INF/web/login.jsp
+			</result>
+		</action>
+		<action name="logList" class="com.school.view.web.LogList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/logList.jsp
+			</result>
+		</action></package>
+	<package name="school" extends="struts-default">
+		<action name="main" class="com.school.view.web.Main">
+			<result name="main" type="dispatcher">
+				/WEB-INF/web/main.jsp
+			</result>
+			<result name="editStudent" type="dispatcher">/WEB-INF/web/enterStudentInfo.jsp</result>
+			<result name="errorInfo" type="dispatcher">
+				/WEB-INF/web/errorInfo.jsp
+			</result>
+		</action>
+		<action name="studentDiv"
+			class="com.school.view.web.StudentDiv">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/studentDiv.jsp
+			</result>
+		</action>
+		<action name="gradeList"
+			class="com.school.view.web.GradeList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/gradeList.jsp
+			</result>
+		</action>
+		<action name="addGrade" class="com.school.view.web.AddGrade">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/addGrade.jsp
+			</result>
+		</action>
+		<action name="saveAddingGrade"
+			class="com.school.view.web.SaveAddingGrade">
+			
+		</action>
+		<action name="editGrade"
+			class="com.school.view.web.EditGrade">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/editGrade.jsp
+			</result>
+		</action>
+		<action name="getSchoolNode"
+			class="com.school.view.web.GetSchoolNode">
+		</action>
+		<action name="classList"
+			class="com.school.view.web.ClassList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/classList.jsp
+			</result>
+			<result name="errorInfo" type="dispatcher">
+				/WEB-INF/web/errorInfo.jsp
+			</result></action>
+		<action name="addClass" class="com.school.view.web.AddClass">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/addClass.jsp
+			</result></action>
+		<action name="saveAddingClass"
+			class="com.school.view.web.SaveAddingClass">
+		</action>
+		<action name="editClass"
+			class="com.school.view.web.EditClass">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/editClass.jsp
+			</result>
+		</action>
+		<action name="saveEditClass"
+			class="com.school.view.web.UpdateClass">
+		</action>
+		<action name="updateGrade"
+			class="com.school.view.web.UpdateGrade">
+		</action>
+		<action name="studentList"
+			class="com.school.view.web.StudentList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/studentList.jsp
+			</result>
+			<result name="errorInfo" type="dispatcher">
+				/WEB-INF/web/errorInfo.jsp
+			</result></action>
+		<action name="studentInfo"
+			class="com.school.view.web.StudentInfo">
+			<result name="add" type="dispatcher">
+				/WEB-INF/web/addStudent.jsp
+			</result>
+			<result name="edit" type="dispatcher">
+				/WEB-INF/web/editStudent.jsp
+			</result>
+			<result type="dispatcher" name="errorInfo">
+				/WEB-INF/web/errorInfo.jsp
+			</result></action>
+		<action name="saveStudent"
+			class="com.school.view.web.SaveStudentInfo">
+		</action>
+		<action name="beforeHandAdd"
+			class="com.school.view.web.BeforeHandAdd">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/beforeHandAdd.jsp
+			</result>
+		</action>
+		<action name="saveBeforeHandAdd"
+			class="com.school.view.web.SaveBeforeHandAdd">
+		</action>
+		<action name="saveEnterStudent"
+			class="com.school.view.web.SaveEnterStudent">
+		</action>
+		<action name="review" class="com.school.view.web.Review">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/reviewStudent.jsp
+			</result>
+		</action>
+		<action name="saveReview"
+			class="com.school.view.web.SaveReview">
+		</action>
+		<action name="delStudent"
+			class="com.school.view.web.DelStudent">
+		</action>
+		<action name="delClass" class="com.school.view.web.DelClass"></action>
+		<action name="delGrade" class="com.school.view.web.DelGrade"></action>
+		<action name="teacherList"
+			class="com.school.view.web.TeacherList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/teacherList.jsp
+			</result>
+		</action>
+		<action name="addTeacher"
+			class="com.school.view.web.AddTeacher">
+			<result name="input" type="dispatcher">
+				/WEB-INF/web/addTeacher.jsp
+			</result>
+		</action>
+		<action name="saveAddingTeacher"
+			class="com.school.view.web.SaveAddingTeacher">
+		</action>
+		<action name="delTeacher"
+			class="com.school.view.web.DelTeacher">
+		</action>
+		<action name="editTeacher"
+			class="com.school.view.web.EditTeacher">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/editTeacher.jsp
+			</result>
+			<result name="errorInfo" type="dispatcher">
+				/WEB-INF/web/errorInfo.jsp
+			</result>
+		</action>
+		<action name="updateTeacher"
+			class="com.school.view.web.UpdateTeacher">
+		</action>
+		<action name="userInfo" class="com.school.view.web.UserInfo">
+			<result name="login" type="dispatcher">
+				/WEB-INF/web/login.jsp
+			</result>
+			<result name="adminInfo" type="dispatcher">
+				/WEB-INF/web/upateAdminInfo.jsp
+			</result></action>
+		<action name="systemConfigDiv"
+			class="com.school.view.web.SystemConfigDiv">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/systemConfigDiv.jsp
+			</result>
+		</action>
+		<action name="schoolInfo"
+			class="com.school.view.web.SchoolInfo">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/schoolInfo.jsp
+			</result>
+		</action>
+		<action name="saveSchoolInfo"
+			class="com.school.view.web.SaveSchoolInfo">
+		</action>
+		<action name="teacherLevel"
+			class="com.school.view.web.TeacherLevel">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/teacherLevel.jsp
+			</result>
+		</action>
+		<action name="addTeacherLevel"
+			class="com.school.view.web.AddTeacherLevel">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addTeacherLevel.jsp
+			</result>
+		</action>
+		<action name="saveAddingTeacherLevel"
+			class="com.school.view.web.SaveAddingTeacherLevel">
+		</action>
+		<action name="delTeacherType"
+			class="com.school.view.web.DelTeacherType">
+		</action>
+		<action name="nationList"
+			class="com.school.view.web.NationList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/nationList.jsp
+			</result>
+		</action>
+		<action name="addNation"
+			class="com.school.view.web.AddNation">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addNation.jsp
+			</result>
+		</action>
+		<action name="saveAddingNation"
+			class="com.school.view.web.SaveAddingNation">
+		</action>
+		<action name="delNation"
+			class="com.school.view.web.DelNation">
+		</action>
+		<action name="bloodGroup"
+			class="com.school.view.web.BloodGroup">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/bloodGroup.jsp
+			</result>
+		</action>
+		<action name="saveAddingBloodGroup"
+			class="com.school.view.web.SaveAddingBloodGroup">
+		</action>
+		<action name="addBloodGroup"
+			class="com.school.view.web.AddBloodGroup">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addBloodGroup.jsp
+			</result>
+		</action>
+		<action name="delBloodGroup"
+			class="com.school.view.web.DelBloodGroup">
+		</action>
+		<action name="politicalOrientation"
+			class="com.school.view.web.PoliticalOrientation">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/politicalOrientation.jsp
+			</result>
+		</action>
+		<action name="studentStatusList"
+			class="com.school.view.web.StudentStatusList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/studentStatusList.jsp
+			</result>
+		</action>
+		<action name="addPoliticalOrientation"
+			class="com.school.view.web.AddPoliticalOrientation">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addPoliticalOrientation.jsp
+			</result>
+		</action>
+		<action name="saveAddingPoliticalOrientation"
+			class="com.school.view.web.SaveAddingPoliticalOrientation">
+		</action>
+		<action name="delPoliticalOrientation"
+			class="com.school.view.web.DelPoliticalOrientation">
+		</action>
+		<action name="saveAddingStudentStatus"
+			class="com.school.view.web.SaveAddingStudentStatus">
+		</action>
+		<action name="addStudentStatus"
+			class="com.school.view.web.AddStudentStatus">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addStudentStatus.jsp
+			</result>
+		</action>
+		<action name="delStudentStatus"
+			class="com.school.view.web.DelStudentStatus">
+		</action>
+		<action name="groupList"
+			class="com.school.view.web.GroupList">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/groupList.jsp
+			</result>
+		</action>
+		<action name="addGroupInfo"
+			class="com.school.view.web.AddGroupInfo">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/addGroupInfo.jsp
+			</result>
+		</action>
+		<action name="saveGroupInfo"
+			class="com.school.view.web.SaveGroupInfo">
+		</action>
+		<action name="editGroup"
+			class="com.school.view.web.EditGroup">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/editGroup.jsp
+			</result>
+			<result name="error" type="dispatcher">
+				/WEB-INF/web/errorInfo.jsp
+			</result>
+		</action>
+		<action name="updateGroupInfo" class="com.school.view.web.UpdateGroupInfo"></action>
+		<action name="uploadPhoto"
+			class="com.school.view.web.UploadPhoto">
+		</action>
+		<action name="search" class="com.school.view.web.Search">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/search.jsp
+			</result>
+		</action>
+		<action name="searcherStudent"
+			class="com.school.view.web.SearcherStudent">
+			<result name="success" type="dispatcher">
+				/WEB-INF/web/searchStudentList.jsp
+			</result>
+		</action>
+		<action name="delGroup" class="com.school.view.web.DelGroup"></action></package></struts>    
